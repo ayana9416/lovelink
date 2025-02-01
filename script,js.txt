@@ -1,0 +1,33 @@
+// Switch pages when button is clicked
+function nextPage(pageNumber) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.style.display = 'none'); // Hide all pages
+    
+    const currentPage = document.getElementById(pageNumber);
+    currentPage.style.display = 'block'; // Show selected page
+
+    if (pageNumber === 5) { // Confirmation page
+        startCountdown();
+    }
+}
+
+// Countdown Timer
+function startCountdown() {
+    const countdownElement = document.getElementById('countdown');
+    let timeLeft = 10; // Countdown for 10 seconds
+
+    const countdownInterval = setInterval(() => {
+        countdownElement.textContent = `Time until date: ${timeLeft} seconds...`;
+        timeLeft--;
+        
+        if (timeLeft < 0) {
+            clearInterval(countdownInterval);
+            countdownElement.textContent = "Let's get ready for our date!";
+        }
+    }, 1000);
+}
+
+// Start with the landing page
+document.addEventListener('DOMContentLoaded', () => {
+    nextPage(1); // Start with the landing page
+});

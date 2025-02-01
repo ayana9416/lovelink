@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Him Out!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="landing-page" class="page">
+            <h1>Ready for a Date Night, [Husband's Name]?</h1>
+            <p>Because I think it's time we made some new memories together.</p>
+            <button onclick="nextPage(2)">Click here to begin our adventure!</button>
+        </div>
+
+        <div id="first-date" class="page" style="display: none;">
+            <h2>Flashback to Our First Date</h2>
+            <p>Remember this moment?</p>
+            <img src="your-photo.jpg" alt="First date photo" />
+            <button onclick="nextPage(3)">Next</button>
+        </div>
+
+        <div id="date-challenge" class="page" style="display: none;">
+            <h2>The Date Challenge</h2>
+            <p>Which sounds more fun?</p>
+            <button onclick="nextPage(4)">Cozy dinner at home</button>
+            <button onclick="nextPage(4)">Picnic under the stars</button>
+            <button onclick="nextPage(4)">Spontaneous road trip</button>
+        </div>
+
+        <div id="choose-date" class="page" style="display: none;">
+            <h2>Choose Your Date</h2>
+            <button onclick="nextPage(5)">Dinner at our favorite restaurant</button>
+            <button onclick="nextPage(5)">Netflix and homemade pizza night</button>
+            <button onclick="nextPage(5)">Go on a surprise adventure</button>
+        </div>
+
+        <div id="confirmation" class="page" style="display: none;">
+            <h2>Date Night Confirmed!</h2>
+            <p>I'm so excited to spend time with you! See you tonight, love!</p>
+            <p id="countdown"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
